@@ -108,7 +108,6 @@ SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_primitive_field.cc
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_enum.cc
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_padding_optimizer.cc
-        ${WORK_HOME}/google/protobuf/compiler/test_plugin.cc
         ${WORK_HOME}/google/protobuf/compiler/importer.cc
         ${WORK_HOME}/google/protobuf/field_mask.pb.cc
         ${WORK_HOME}/google/protobuf/timestamp.pb.cc
