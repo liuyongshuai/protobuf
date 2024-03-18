@@ -47,7 +47,6 @@ SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/util/internal/utility.cc
         ${WORK_HOME}/google/protobuf/util/internal/json_objectwriter.cc
         ${WORK_HOME}/google/protobuf/util/internal/error_listener.cc
-        ${WORK_HOME}/google/protobuf/util/internal/type_info_test_helper.cc
         ${WORK_HOME}/google/protobuf/util/internal/datapiece.cc
         ${WORK_HOME}/google/protobuf/util/internal/default_value_objectwriter.cc
         ${WORK_HOME}/google/protobuf/util/internal/type_info.cc
