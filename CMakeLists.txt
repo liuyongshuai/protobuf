@@ -78,7 +78,6 @@ SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/implicit_weak_message.cc
         ${WORK_HOME}/google/protobuf/duration.pb.cc
         ${WORK_HOME}/google/protobuf/struct.pb.cc
-        ${WORK_HOME}/google/protobuf/testing/file.cc
         ${WORK_HOME}/google/protobuf/generated_message_util.cc
         ${WORK_HOME}/google/protobuf/api.pb.cc
         ${WORK_HOME}/google/protobuf/message.cc
