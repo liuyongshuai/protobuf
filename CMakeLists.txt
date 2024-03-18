@@ -54,7 +54,6 @@ SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/util/internal/json_escaping.cc
         ${WORK_HOME}/google/protobuf/util/type_resolver_util.cc
         ${WORK_HOME}/google/protobuf/type.pb.cc
-        ${WORK_HOME}/google/protobuf/arena_test_util.cc
         ${WORK_HOME}/google/protobuf/empty.pb.cc
         ${WORK_HOME}/google/protobuf/extension_set_heavy.cc
         ${WORK_HOME}/google/protobuf/message_lite.cc
