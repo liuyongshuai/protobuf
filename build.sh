@@ -6,21 +6,13 @@ project="bagutils"
 function usage() {
     echo "./build.sh [options]"
     echo "  -h show this help message"
-    echo "  -a -tgc"
-    echo "  -g compile with debug mode"
     echo "  -c clean temp file"
-    echo "  -t build test file"
 }
 
-mode=ONLINE
-with_test=OFF
 clean=OFF
 while getopts "athgcw" opt; do
     case "$opt" in
-        a) mode=DEBUG;clean=ON;with_test=ON;;
-        g) mode=DEBUG;;
         c) clean=ON;;
-        t) with_test=ON;;
         h) usage; exit;;
         ?) usage; exit;;
     esac
@@ -82,8 +74,5 @@ detect_make_dir $build_home
 detect_make_dir $output_home
 
 cd $build_home
-# compile this project
-
 cmake -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} .. && make && make install
-
 make_done_tip $project $? && exit 0
