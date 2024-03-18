@@ -1,7 +1,7 @@
 #!/bin/bash
 work_home="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)" && cd $work_home
 
-project="bagutils"
+project="protobuf"
 
 function usage() {
     echo "./build.sh [options]"

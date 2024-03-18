@@ -1,6 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
-PROJECT(protoc)
-SET(project_name "protoc")
+PROJECT(protobuf)
+SET(project_name "protobuf")
 
 
 #set(CMAKE_CXX_STANDARD 17)
