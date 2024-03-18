@@ -33,7 +33,7 @@
 #include <google/protobuf/compiler/cpp/cpp_generator.h>
 #include <google/protobuf/port_def.inc>
 #include <google/protobuf/port_undef.inc>
-#include "command_line_interface.h"
+#include <google/protobuf/compiler/command_line_interface.h>
 
 
 int main(int argc, char *argv[]) {
