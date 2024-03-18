@@ -4,7 +4,7 @@ SET(project_name "protobuf")
 
 
 #set(CMAKE_CXX_STANDARD 17)
-SET(CMAKE_CXX_FLAGS "-gdwarf-2 -std=c++11 -DHAVE_PTHREAD -pipe -fno-omit-frame-pointer -fPIC -D_GLIBCXX_USE_CXX11_ABI=0")
+SET(CMAKE_CXX_FLAGS "-gdwarf-2 -std=c++11 -pipe -fno-omit-frame-pointer -fPIC -D_GLIBCXX_USE_CXX11_ABI=0")
 
 # work home
 SET(WORK_HOME ${CMAKE_CURRENT_SOURCE_DIR})
