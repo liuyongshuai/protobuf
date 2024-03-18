@@ -80,12 +80,9 @@ SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/duration.pb.cc
         ${WORK_HOME}/google/protobuf/struct.pb.cc
         ${WORK_HOME}/google/protobuf/testing/file.cc
-        ${WORK_HOME}/google/protobuf/test_util.cc
         ${WORK_HOME}/google/protobuf/generated_message_util.cc
         ${WORK_HOME}/google/protobuf/api.pb.cc
         ${WORK_HOME}/google/protobuf/message.cc
-        ${WORK_HOME}/google/protobuf/map_lite_test_util.cc
-        ${WORK_HOME}/google/protobuf/test_util_lite.cc
         ${WORK_HOME}/google/protobuf/service.cc
         ${WORK_HOME}/google/protobuf/descriptor.cc
         ${WORK_HOME}/google/protobuf/wire_format.cc
@@ -93,13 +90,11 @@ SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/map_field.cc
         ${WORK_HOME}/google/protobuf/compiler/command_line_interface.cc
         ${WORK_HOME}/google/protobuf/compiler/code_generator.cc
-        ${WORK_HOME}/google/protobuf/compiler/annotation_test_util.cc
         ${WORK_HOME}/google/protobuf/compiler/zip_writer.cc
         ${WORK_HOME}/google/protobuf/compiler/parser.cc
         ${WORK_HOME}/google/protobuf/compiler/plugin.cc
         ${WORK_HOME}/google/protobuf/compiler/subprocess.cc
         ${WORK_HOME}/google/protobuf/compiler/plugin.pb.cc
-        ${WORK_HOME}/google/protobuf/compiler/mock_code_generator.cc
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_extension.cc
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_message.cc
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_generator.cc
