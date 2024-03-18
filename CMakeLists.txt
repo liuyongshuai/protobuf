@@ -1,20 +1,11 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
-PROJECT(bagutils)
-SET(project_name "bagutils")
+PROJECT(protobuf)
+SET(project_name "protobuf")
 
-##============= ???定编译?????? =============
-OPTION(TARGET_DEBUG_MODE "Build the project with debug mode" OFF)
+
 #set(CMAKE_CXX_STANDARD 17)
-SET(CMAKE_CXX_FLAGS "-gdwarf-2 -std=c++11 -pipe -fno-omit-frame-pointer -fPIC -D_GLIBCXX_USE_CXX11_ABI=0 -DSPDLOG_FMT_PRINTF -D__FILENAME__='\"$(notdir $<)\"'")
-if (TARGET_DEBUG_MODE)
-    SET(CMAKE_BUILD_TYPE "Debug")
-    MESSAGE("debug")
-    SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -W -Wall -O0 -g -ftest-coverage -fprofile-arcs -D__DEBUG_MODE__ -DLOG_DEBUG_ENABLE=true")
-else (TARGET_DEBUG_MODE)
-    SET(CMAKE_BUILD_TYPE "Release")
-    SET(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -DNDEBUG -O2 -DLOG_DEBUG_ENABLE=false")
-    MESSAGE("not debug")
-endif (TARGET_DEBUG_MODE)
+SET(CMAKE_CXX_FLAGS "-gdwarf-2 -std=c++11 -fPIC -pipe -fno-omit-frame-pointer -fPIC -D_GLIBCXX_USE_CXX11_ABI=0")
+SET(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -DNDEBUG -DHAVE_PTHREAD -O2 -DLOG_DEBUG_ENABLE=false")
 
 # work home
 SET(WORK_HOME ${CMAKE_CURRENT_SOURCE_DIR})
@@ -23,7 +14,6 @@ SET(WORK_HOME ${CMAKE_CURRENT_SOURCE_DIR})
 INCLUDE_DIRECTORIES(${WORK_HOME})
 
 
-#引???其?????????
 SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/any.cc
         ${WORK_HOME}/google/protobuf/stubs/int128.cc

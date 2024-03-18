@@ -31,7 +31,6 @@
 // Author: kenton@google.com (Kenton Varda)
 
 #include <google/protobuf/stubs/common.h>
-
 #include <atomic>
 #include <errno.h>
 #include <sstream>

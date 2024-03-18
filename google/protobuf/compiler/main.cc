@@ -32,16 +32,16 @@
 
 #include <google/protobuf/compiler/cpp/cpp_generator.h>
 #include <google/protobuf/port_def.inc>
+#include <google/protobuf/port_undef.inc>
+#include "command_line_interface.h"
 
-namespace google {
-namespace protobuf {
-namespace compiler {
-int main(int argc, char* argv[]) {
-    CommandLineInterface cli;
+
+int main(int argc, char *argv[]) {
+    google::protobuf::compiler::CommandLineInterface cli;
     cli.AllowPlugins("protoc-");
 
     // Proto2 C++
-    cpp::CppGenerator cpp_generator;
+    google::protobuf::compiler::cpp::CppGenerator cpp_generator;
     cli.RegisterGenerator("--cpp_out", "--cpp_opt", &cpp_generator, "Generate C++ header and source.");
 
 #ifdef GOOGLE_PROTOBUF_RUNTIME_INCLUDE_BASE
