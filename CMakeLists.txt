@@ -1,6 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
-PROJECT(protobuf)
-SET(project_name "protobuf")
+PROJECT(protoc)
+SET(project_name "protoc")
 
 
 #set(CMAKE_CXX_STANDARD 17)
@@ -117,6 +117,6 @@ SET(SRC_SOURCE_LIST
         )
 
 
-ADD_EXECUTABLE("protoc" ${WORK_HOME}/google/protobuf/compiler/main.cc ${SRC_SOURCE_LIST})
+ADD_EXECUTABLE("protoc" ${WORK_HOME}/protoc.cc ${SRC_SOURCE_LIST})
 INSTALL(TARGETS "protoc" DESTINATION ${WORK_HOME}/output/)
 
