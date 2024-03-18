@@ -74,5 +74,5 @@ detect_make_dir $build_home
 detect_make_dir $output_home
 
 cd $build_home
-cmake -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} .. && make && make install
+cmake -DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} .. && make -j 4 && make install
 make_done_tip $project $? && exit 0
