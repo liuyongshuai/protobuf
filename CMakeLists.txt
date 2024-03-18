@@ -2,7 +2,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 PROJECT(bagutils)
 SET(project_name "bagutils")
 
-##============= 确定编译选项 =============
+##============= ???定编译?????? =============
 OPTION(TARGET_DEBUG_MODE "Build the project with debug mode" OFF)
 #set(CMAKE_CXX_STANDARD 17)
 SET(CMAKE_CXX_FLAGS "-gdwarf-2 -std=c++11 -pipe -fno-omit-frame-pointer -fPIC -D_GLIBCXX_USE_CXX11_ABI=0 -DSPDLOG_FMT_PRINTF -D__FILENAME__='\"$(notdir $<)\"'")
@@ -20,22 +20,19 @@ endif (TARGET_DEBUG_MODE)
 SET(WORK_HOME ${CMAKE_CURRENT_SOURCE_DIR})
 
 #include list
-SET(include_list "")
-LIST(APPEND include_list ${WORK_HOME})
+INCLUDE_DIRECTORIES(${WORK_HOME})
 
-#引入其他文件
+
+#引???其?????????
 SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/any.cc
         ${WORK_HOME}/google/protobuf/stubs/int128.cc
         ${WORK_HOME}/google/protobuf/stubs/structurally_valid.cc
         ${WORK_HOME}/google/protobuf/stubs/status.cc
-        ${WORK_HOME}/google/protobuf/stubs/time_test.cc
         ${WORK_HOME}/google/protobuf/stubs/common.cc
         ${WORK_HOME}/google/protobuf/stubs/bytestream.cc
         ${WORK_HOME}/google/protobuf/stubs/statusor.cc
         ${WORK_HOME}/google/protobuf/stubs/strutil.cc
-        ${WORK_HOME}/google/protobuf/stubs/status_test.cc
-        ${WORK_HOME}/google/protobuf/stubs/statusor_test.cc
         ${WORK_HOME}/google/protobuf/stubs/stringprintf.cc
         ${WORK_HOME}/google/protobuf/stubs/time.cc
         ${WORK_HOME}/google/protobuf/stubs/substitute.cc
@@ -44,46 +41,33 @@ SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/generated_message_table_driven_lite.cc
         ${WORK_HOME}/google/protobuf/any_lite.cc
         ${WORK_HOME}/google/protobuf/descriptor_database.cc
-        ${WORK_HOME}/google/protobuf/no_field_presence_test.cc
         ${WORK_HOME}/google/protobuf/reflection_ops.cc
         ${WORK_HOME}/google/protobuf/arena.cc
         ${WORK_HOME}/google/protobuf/util/time_util.cc
         ${WORK_HOME}/google/protobuf/util/field_mask_util.cc
         ${WORK_HOME}/google/protobuf/util/delimited_message_util.cc
-        ${WORK_HOME}/google/protobuf/util/field_mask_util_test.cc
         ${WORK_HOME}/google/protobuf/util/field_comparator.cc
         ${WORK_HOME}/google/protobuf/util/message_differencer.cc
         ${WORK_HOME}/google/protobuf/util/json_util.cc
-        ${WORK_HOME}/google/protobuf/util/time_util_test.cc
         ${WORK_HOME}/google/protobuf/util/internal/protostream_objectsource.cc
-        ${WORK_HOME}/google/protobuf/util/internal/default_value_objectwriter_test.cc
         ${WORK_HOME}/google/protobuf/util/internal/field_mask_utility.cc
-        ${WORK_HOME}/google/protobuf/util/internal/protostream_objectsource_test.cc
         ${WORK_HOME}/google/protobuf/util/internal/object_writer.cc
-        ${WORK_HOME}/google/protobuf/util/internal/json_stream_parser_test.cc
         ${WORK_HOME}/google/protobuf/util/internal/json_stream_parser.cc
-        ${WORK_HOME}/google/protobuf/util/internal/protostream_objectwriter_test.cc
         ${WORK_HOME}/google/protobuf/util/internal/protostream_objectwriter.cc
         ${WORK_HOME}/google/protobuf/util/internal/proto_writer.cc
         ${WORK_HOME}/google/protobuf/util/internal/utility.cc
         ${WORK_HOME}/google/protobuf/util/internal/json_objectwriter.cc
         ${WORK_HOME}/google/protobuf/util/internal/error_listener.cc
-        ${WORK_HOME}/google/protobuf/util/internal/json_objectwriter_test.cc
         ${WORK_HOME}/google/protobuf/util/internal/type_info_test_helper.cc
         ${WORK_HOME}/google/protobuf/util/internal/datapiece.cc
         ${WORK_HOME}/google/protobuf/util/internal/default_value_objectwriter.cc
         ${WORK_HOME}/google/protobuf/util/internal/type_info.cc
         ${WORK_HOME}/google/protobuf/util/internal/json_escaping.cc
-        ${WORK_HOME}/google/protobuf/util/delimited_message_util_test.cc
-        ${WORK_HOME}/google/protobuf/util/field_comparator_test.cc
-        ${WORK_HOME}/google/protobuf/util/json_util_test.cc
         ${WORK_HOME}/google/protobuf/util/type_resolver_util.cc
-        ${WORK_HOME}/google/protobuf/util/type_resolver_util_test.cc
         ${WORK_HOME}/google/protobuf/type.pb.cc
         ${WORK_HOME}/google/protobuf/arena_test_util.cc
         ${WORK_HOME}/google/protobuf/empty.pb.cc
         ${WORK_HOME}/google/protobuf/extension_set_heavy.cc
-        ${WORK_HOME}/google/protobuf/map_test.cc
         ${WORK_HOME}/google/protobuf/message_lite.cc
         ${WORK_HOME}/google/protobuf/io/zero_copy_stream_impl_lite.cc
         ${WORK_HOME}/google/protobuf/io/zero_copy_stream_impl.cc
@@ -106,21 +90,16 @@ SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/duration.pb.cc
         ${WORK_HOME}/google/protobuf/struct.pb.cc
         ${WORK_HOME}/google/protobuf/testing/file.cc
-        ${WORK_HOME}/google/protobuf/testing/googletest.cc
-        ${WORK_HOME}/google/protobuf/preserve_unknown_enum_test.cc
         ${WORK_HOME}/google/protobuf/test_util.cc
         ${WORK_HOME}/google/protobuf/generated_message_util.cc
         ${WORK_HOME}/google/protobuf/api.pb.cc
         ${WORK_HOME}/google/protobuf/message.cc
         ${WORK_HOME}/google/protobuf/map_lite_test_util.cc
         ${WORK_HOME}/google/protobuf/test_util_lite.cc
-        ${WORK_HOME}/google/protobuf/map_field_test.cc
         ${WORK_HOME}/google/protobuf/service.cc
-        ${WORK_HOME}/google/protobuf/any_test.cc
         ${WORK_HOME}/google/protobuf/descriptor.cc
         ${WORK_HOME}/google/protobuf/wire_format.cc
         ${WORK_HOME}/google/protobuf/dynamic_message.cc
-        ${WORK_HOME}/google/protobuf/drop_unknown_fields_test.cc
         ${WORK_HOME}/google/protobuf/map_field.cc
         ${WORK_HOME}/google/protobuf/compiler/command_line_interface.cc
         ${WORK_HOME}/google/protobuf/compiler/code_generator.cc
@@ -133,7 +112,6 @@ SET(SRC_SOURCE_LIST
         ${WORK_HOME}/google/protobuf/compiler/mock_code_generator.cc
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_extension.cc
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_message.cc
-        ${WORK_HOME}/google/protobuf/compiler/cpp/metadata_test.cc
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_generator.cc
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_enum_field.cc
         ${WORK_HOME}/google/protobuf/compiler/cpp/cpp_service.cc
