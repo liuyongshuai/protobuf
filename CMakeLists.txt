@@ -119,5 +119,5 @@ SET(SRC_SOURCE_LIST
 
 
 ADD_EXECUTABLE("protoc" ${WORK_HOME}/google/protobuf/compiler/main.cc ${SRC_SOURCE_LIST})
-INSTALL(TARGETS ${target} DESTINATION ${WORK_HOME}/output/)
+INSTALL(TARGETS "protoc" DESTINATION ${WORK_HOME}/output/)
 
